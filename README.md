@@ -18,7 +18,20 @@ Algunos comandos generales y especificos de este proyecto los puedes consultar [
 2. Acceder al proyecto y estando dentro instalar las dependecias con composer 
  - `composer install`
 3. Copiar el archivo env y crear otro pero debe ser nombrado como .env
-4. Modificar las conexiones a la base de datos con forme a tus propias credenciales de Mysql.
+4. Modificar las conexiones a la base de datos con forme a tus propias credenciales.
+    - Crear DB con el nombre que desees
+Agregar tus credenciales en el .env, ejemplo:
+
+```
+database.default.hostname = localhost
+database.default.database = nombredetubase
+database.default.username = root
+database.default.password =
+database.default.DBDriver = MySQLi
+database.default.DBPrefix =
+database.default.port = 3306
+```
+
 5. Ejecutar las migraciones para tener las tablas involucradas
  - `php spark migrate --all`
 6. Ejecutar migraciones para generar datos.
