@@ -42,3 +42,16 @@ database.default.port = 3306
 9. Ingresa con los usuarios:
   - usuario: antonio / marcos
   - contraseña: admin123
+
+
+  ## Versiones del proyecto
+
+  - PHP 8.1.10
+  - Codeigniter 4.6
+
+| Paquete                | Versión Requerida |
+|------------------------|------------------|
+| codeigniter4/shield   | ^1.1             |
+| fakerphp/faker        | ^1.9             |
+| mikey179/vfsstream    | ^1.6             |
+| phpunit/phpunit       | ^10.5.16         |
