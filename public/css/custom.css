@@ -1,0 +1,16 @@
+/* Colores personalizados */
+.bg-mi-footer {
+    background-color: #004080 !important; /* Un gris oscuro personalizado */
+}
+
+.text-mi-footer {
+    color: #FFFFFF !important; /* Un amarillo dorado */
+}
+
+.bg-mi-navbar {
+    background-color: #004080 !important; /* Un azul oscuro */
+}
+
+.text-mi-navbar {
+    color: #FFFFFF !important;
+}
