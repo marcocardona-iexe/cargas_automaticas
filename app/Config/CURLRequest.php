@@ -17,4 +17,8 @@ class CURLRequest extends BaseConfig
      * It may cause an error request with unnecessary headers.
      */
     public bool $shareOptions = false;
+
+    public bool $allowRedirects = true; // Permitir redirecciones en la API
+    public int $maxRedirects = 5; // Máximo número de redirecciones
+    public bool $verifySSL = false; // Desactivar verificación SSL en entornos de desarrollo
 }
