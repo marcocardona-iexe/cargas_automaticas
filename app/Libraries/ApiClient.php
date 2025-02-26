@@ -68,15 +68,17 @@ class ApiClient
      */
     public function request(string $method, string $endpoint, array $data = [])
     {
+        $url = $this->baseURL . '?wstoken=' . $this->apiKey . '&moodlewsrestformat=json&wsfunction=' . $endpoint;
+    
         $options = [
             'headers' => [
-                'Authorization' => 'Bearer ' . $this->apiKey,
                 'Content-Type'  => 'application/json',
             ],
             'json' => $data,
         ];
-
-        $response = $this->client->request($method, $this->baseURL . $endpoint, $options);
+    
+        $response = $this->client->request($method, $url, $options);
         return json_decode($response->getBody(), true);
     }
+    
 }

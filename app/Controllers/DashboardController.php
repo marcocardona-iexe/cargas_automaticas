@@ -19,14 +19,18 @@ class DashboardController extends BaseController
         return view('dashboard/index');
     }
 
-    public function obtenerCursos(){
-
-         // Obtén los cursos a través del repositorio
-         $cursos = $this->courseRepository->obtenerCursos();
-         var_dump($this->response->setJSON($cursos));
-         exit();
-
-        //return view('dashboard/create');
-
+    public function obtenerCursos()
+    {
+        // Obtén los cursos a través del repositorio
+        $cursos = $this->courseRepository->obtenerCursos();
+    
+        // Depuración: Verificar qué datos devuelve la API
+        header('Content-Type: application/json');
+        echo json_encode($cursos, JSON_PRETTY_PRINT);
+        exit();
+    
+        // Si todo está correcto, descomentar esta línea
+        // return $this->response->setJSON($cursos);
     }
+    
 }

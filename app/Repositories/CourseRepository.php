@@ -17,7 +17,7 @@ class CourseRepository
     public function obtenerCursos()
     {
 
-        return $this->apiClient->request('GET', '/core_course_get_courses');
+        return $this->apiClient->request('GET', 'core_course_get_courses');
     }
 
 }
