@@ -1,10 +1,10 @@
 <?php
 
-namespace App\Repositories;
+namespace App\Services;
 
 use App\Libraries\ApiClient;
 
-class CourseRepository
+class MoodleApiService
 {
     protected $apiClient;
 
@@ -14,9 +14,10 @@ class CourseRepository
     }
 
     // Obtener usuarios desde la API externa
-    public function obtenerCursosLocalYDeMoodle()
+    public function obtenerCursos()
     {
 
+        return $this->apiClient->request('GET', 'core_course_get_courses');
     }
 
 }

@@ -3,15 +3,15 @@
 namespace App\Controllers;
 
 use App\Controllers\BaseController;
-use App\Repositories\CourseRepository;
+use App\Services\MoodleApiService;
 
 class DashboardController extends BaseController
 {
 
-    protected $courseRepository;
+    protected $moodleService;
 
     public function __construct() {
-        $this->courseRepository = new CourseRepository();
+        $this->moodleService = new MoodleApiService();
     }
 
     public function index()
@@ -21,7 +21,9 @@ class DashboardController extends BaseController
 
     public function obtenerCursos()
     {
-        $cursos = $this->courseRepository->obtenerCursos();
+        // por el momento se esta consumiendo directamente el servicio pero no siempre será asi
+        //quizas mas adelante se consuma una clase que combine datos de service y repository
+        $cursos = $this->moodleService->obtenerCursos();
     
         // Usar la función de depuración en lugar de escribir todo el código manualmente
         debug_json($cursos);
