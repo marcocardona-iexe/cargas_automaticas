@@ -21,15 +21,12 @@ class DashboardController extends BaseController
 
     public function obtenerCursos()
     {
-        // Obtén los cursos a través del repositorio
         $cursos = $this->courseRepository->obtenerCursos();
     
-        // Depuración: Verificar qué datos devuelve la API
-        header('Content-Type: application/json');
-        echo json_encode($cursos, JSON_PRETTY_PRINT);
-        exit();
+        // Usar la función de depuración en lugar de escribir todo el código manualmente
+        debug_json($cursos);
     
-        // Si todo está correcto, descomentar esta línea
+        // Si todo está bien, puedes comentar la depuración y usar la respuesta normal
         // return $this->response->setJSON($cursos);
     }
     
