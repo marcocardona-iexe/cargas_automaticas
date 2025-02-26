@@ -8,6 +8,6 @@ use CodeIgniter\Router\RouteCollection;
 $routes->get('/', 'Home::index');
 
 $routes->get('dashboard', 'DashboardController::index');
-$routes->get('dashboard/create', 'DashboardController::create');
+$routes->get('dashboard/create', 'DashboardController::obtenerCursos');
 
 service('auth')->routes($routes);
