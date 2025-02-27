@@ -67,3 +67,6 @@
 #--------------------------------------------------------------------
 
 # logger.threshold = 4
+
+# MOODLE_API_BASE_URL=http://localhost/webservice/rest/server.php
+# MOODLE_API_TOKEN=aquivatutoken

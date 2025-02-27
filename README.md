@@ -31,15 +31,19 @@ database.default.DBDriver = MySQLi
 database.default.DBPrefix =
 database.default.port = 3306
 ```
-
-5. Ejecutar las migraciones para tener las tablas involucradas
+5. Agregar tu Api Key de Moodle que debiste generar desde la paltaforma en el .env
+ ```
+ # MOODLE_API_BASE_URL=http://localhost/webservice/rest/server.php
+ # MOODLE_API_TOKEN=aquivatutoken
+```
+6. Ejecutar las migraciones para tener las tablas involucradas
  - `php spark migrate --all`
 6. Ejecutar migraciones para generar datos.
- - `php spark db:seed UserSeeder`
-7. Levantar servidor local
+7- `php spark db:seed UserSeeder`
+8. Levantar servidor local
   - `php spark serve`
-8. Acceder a la ruta que les proporcione el paso a anterior *http://localhost:8080/login*
-9. Ingresa con los usuarios:
+9. Acceder a la ruta que les proporcione el paso a anterior *http://localhost:8080/login*
+10. Ingresa con los usuarios:
   - usuario: antonio / marcos
   - contraseña: admin123
 
