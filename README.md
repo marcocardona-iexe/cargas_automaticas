@@ -9,7 +9,7 @@
 
 ### Comandos basicos
 
-Algunos comandos generales y especificos de este proyecto los puedes consultar [Texto del enlace](https://gist.github.com/HectorIEXE/070c36a774c3e917dad6156eef5208a6) 
+Algunos comandos generales y especificos de este proyecto los puedes consultar [aqui](https://gist.github.com/HectorIEXE/070c36a774c3e917dad6156eef5208a6) 
 
 ### Configuración inicial del proyecto
 
@@ -33,8 +33,8 @@ database.default.port = 3306
 ```
 5. Agregar tu Api Key de Moodle que debiste generar desde la paltaforma en el .env
  ```
- # MOODLE_API_BASE_URL=http://localhost/webservice/rest/server.php
- # MOODLE_API_TOKEN=aquivatutoken
+  MOODLE_API_BASE_URL=http://localhost/webservice/rest/server.php
+  MOODLE_API_TOKEN=aquivatutoken
 ```
 6. Ejecutar las migraciones para tener las tablas involucradas
  - `php spark migrate --all`
